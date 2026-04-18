@@ -81,6 +81,9 @@ st.markdown("""
         margin: 2px 0 0 0;
         text-transform: uppercase;
         letter-spacing: 0.5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;            
     }
 
     /* Section headers in sidebar */

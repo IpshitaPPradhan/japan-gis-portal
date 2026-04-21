@@ -347,7 +347,7 @@ st.markdown(f"""
 
 # ── Stats row ─────────────────────────────────────────────────────────────────
 
-@st.cache_data(ttl=300, show_spinner=False)
+@st.cache_data(ttl=86400, show_spinner=False)
 def load_stats(prefecture: str) -> dict:
     return db.get_stats(prefecture)
 

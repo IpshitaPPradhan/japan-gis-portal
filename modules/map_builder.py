@@ -108,27 +108,27 @@ def _add_vector_tile_layer(m, view_name, layer_name,
 # For point data and lines, GeoJSON is fine — only polygon hazard layers
 # are problematic due to size.
 
-@st.cache_data(ttl=300, show_spinner=False)
+@st.cache_data(ttl=86400, show_spinner=False)
 def _fetch_facilities(prefecture, ftype):
     return db.get_facilities(prefecture, facility_types=[ftype])
 
-@st.cache_data(ttl=300, show_spinner=False)
+@st.cache_data(ttl=86400, show_spinner=False)
 def _fetch_emergency_roads(prefecture):
     return db.get_emergency_roads(prefecture)
 
-@st.cache_data(ttl=300, show_spinner=False)
+@st.cache_data(ttl=86400, show_spinner=False)
 def _fetch_bridges(prefecture):
     return db.get_bridges(prefecture)
 
-@st.cache_data(ttl=300, show_spinner=False)
+@st.cache_data(ttl=86400, show_spinner=False)
 def _fetch_osm_roads(prefecture):
     return db.get_osm_roads(prefecture)
 
-@st.cache_data(ttl=300, show_spinner=False)
+@st.cache_data(ttl=86400, show_spinner=False)
 def _fetch_population(prefecture, year):
     return db.get_population_grid(prefecture, year)
 
-@st.cache_data(ttl=300, show_spinner=False)
+@st.cache_data(ttl=86400, show_spinner=False)
 def _fetch_bottleneck_roads(prefecture):
     from sqlalchemy import text
     return gpd.read_postgis(
@@ -144,7 +144,7 @@ def _fetch_bottleneck_roads(prefecture):
     )
 
 
-@st.cache_data(ttl=300, show_spinner=False)
+@st.cache_data(ttl=86400, show_spinner=False)
 def _fetch_critical_bridges(prefecture):
     from sqlalchemy import text
     return gpd.read_postgis(

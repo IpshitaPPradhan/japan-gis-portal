@@ -52,6 +52,18 @@ OSM via osmnx ────┘              ↓                      ↓
 - **Hospital vulnerability** — 369 hospitals inside tsunami inundation zones
 - **Shelter accessibility** — Multi-source Dijkstra across full Miyagi road network
 
+**Static Analysis** — Pre-computed findings:
+- Facility exposure by hazard zone (shelters, hospitals, fire stations, police)
+- Shelter capacity vs population (2020 → 2050)
+- Emergency service accessibility distances
+- Population decline 2020→2050 in hazard zones
+- Vulnerability hotspots
+
+**Interactive Explorer** — Live PostGIS queries:
+- Select any hazard zone + facility type
+- See which specific facilities are at risk
+- Real-time counts and severity breakdown
+
 ## 🛠️ Stack
 
 | Component | Technology |
@@ -127,6 +139,7 @@ japan-gis-portal/
     ├── 01_schema.sql              # PostGIS tables, indexes, prefecture seed
     └── 02_tile_views.sql          # pg_tileserv optimized views
 ```
+
 
 ## 📋 Data Sources
 

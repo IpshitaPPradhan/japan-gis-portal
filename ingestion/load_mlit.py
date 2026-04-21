@@ -226,7 +226,9 @@ def load_evacuation():
         'type':         'shelter',
         'name':         gdf.get('P20_002', None),
         'name_ja':      gdf.get('P20_002', None),
-        'capacity':     pd.to_numeric(gdf.get('P20_005', None), errors='coerce'),
+        'capacity':     pd.to_numeric(gdf.get('P20_005', None), errors='coerce').where(
+                            pd.to_numeric(gdf.get('P20_005', None), errors='coerce') > 0, None
+                        ),
         'in_hazard':    in_hazard,
         'hazard_types': hazard_list,
         'risk_score':   pd.to_numeric(gdf.get('レベル', None), errors='coerce'),

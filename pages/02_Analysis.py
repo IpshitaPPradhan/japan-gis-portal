@@ -700,6 +700,10 @@ def show_interactive():
         if facility == 'shelter' \
         else df[['name', 'severity']].copy()
 
+# Fix: replace negative capacity with N/A
+    if 'Capacity' in display_df.columns or 'capacity' in display_df.columns:
+        display_df: pd.DataFrame = display_df.replace(-1, None)
+
     display_df.columns = [c.replace('_',' ').title()
                           for c in display_df.columns]
     st.dataframe(display_df, use_container_width=True, height=400)

@@ -80,10 +80,7 @@ st.markdown("""
         color: #7066a0;
         margin: 2px 0 0 0;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;            
+        letter-spacing: 0.5px;            
     }
 
     /* Section headers in sidebar */

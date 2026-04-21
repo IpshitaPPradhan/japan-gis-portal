@@ -145,7 +145,7 @@ HAZARD_LAYERS = {
         "weight":      0.5,
         "description": "Debris flow, steep slope, and landslide warning zones",
         "source":      "MLIT A33",
-        "default_on":  True,
+        "default_on":  False,
     },
     "disaster_danger": {
         "label":       "Disaster Danger Zones",
@@ -193,7 +193,7 @@ FACILITY_LAYERS = {
         "icon_prefix": "fa",
         "description": "Hospitals, clinics, and medical facilities",
         "source":      "MLIT P04",
-        "default_on":  True,
+        "default_on":  False,
     },
     "fire_station": {
         "label":       "Fire Stations",
@@ -297,55 +297,13 @@ POPULATION_COLORSCALE = [
 # ── Stats display config ──────────────────────────────────────────────────────
 
 STATS_CONFIG = [
-    {
-        "key":     "total_shelters",
-        "label":   "Shelters",
-        "icon":    "🏠",
-        "format":  "{:,}",
-        "color":   "#22bb66",
-    },
-    {
-        "key":     "shelters_in_tsunami",
-        "label":   "Shelters in Tsunami Zone",
-        "icon":    "⚠️",
-        "format":  "{:,}",
-        "color":   "#ff4444",
-    },
-    {
-        "key":     "total_hospitals",
-        "label":   "Hospitals",
-        "icon":    "🏥",
-        "format":  "{:,}",
-        "color":   "#22bbaa",
-    },
-    {
-        "key":     "hospitals_in_tsunami",
-        "label":   "Hospitals in Tsunami Zone",
-        "icon":    "⚠️",
-        "format":  "{:,}",
-        "color":   "#ff4444",
-    },
-    {
-        "key":     "emergency_road_km",
-        "label":   "Emergency Road km",
-        "icon":    "🛣️",
-        "format":  "{:,.0f} km",
-        "color":   "#c084fc",
-    },
-    {
-        "key":     "population_2020",
-        "label":   "Population (2020)",
-        "icon":    "👥",
-        "format":  "{:,.0f}",
-        "color":   "#4db8ff",
-    },
-    {
-        "key":     "population_2050",
-        "label":   "Population (2050 est.)",
-        "icon":    "📉",
-        "format":  "{:,.0f}",
-        "color":   "#ffaa33",
-    },
+    {"key": "total_shelters",       "label": "Shelters",           "icon": "🏠", "format": "{:,}",      "color": "#22bb66"},
+    {"key": "shelters_in_tsunami",  "label": "In Tsunami Zone",    "icon": "⚠️", "format": "{:,}",      "color": "#ff4444"},
+    {"key": "total_hospitals",      "label": "Hospitals",          "icon": "🏥", "format": "{:,}",      "color": "#22bbaa"},
+    {"key": "hospitals_in_tsunami", "label": "In Tsunami Zone",    "icon": "⚠️", "format": "{:,}",      "color": "#ff4444"},
+    {"key": "emergency_road_km",    "label": "Emergency Roads",    "icon": "🛣️", "format": "{:,.0f} km","color": "#c084fc"},
+    {"key": "population_2020",      "label": "Population 2020",    "icon": "👥", "format": "{:,.0f}",   "color": "#4db8ff"},
+    {"key": "population_2050",      "label": "Population 2050",    "icon": "📉", "format": "{:,.0f}",   "color": "#ffaa33"},
 ]
 
 

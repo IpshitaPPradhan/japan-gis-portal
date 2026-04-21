@@ -7,6 +7,9 @@ A production-grade multi-prefecture disaster risk GIS portal for Japan, integrat
 ![Portal Screenshot](docs/screenshot.png)
 > Miyagi Prefecture fully loaded · 9 additional prefectures configured
 
+## 🌐 Live Demo
+**[https://www.japan-disaster-risk-gis-portal.com](https://www.japan-disaster-risk-gis-portal.com)**
+Hosted on AWS EC2 ap-northeast-1 (Tokyo) · SSL/HTTPS · Nginx reverse proxy
 
 ## 🏗️ Architecture
 
